@@ -21,11 +21,77 @@ Select TWO Additional Features to Add
   <meta charset="utf-8">
   <style>
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 450px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+  overflow: scroll;
+}
+
+.invite {
+  background-color: aqua;
+  justify-content: center;
+}
+
+#mystery {
+ padding-top: 50px;
+}
   </style>
 </head>
 <body>
-
- 
+<center><div class="invite">
+  <h1>You're invited...</h1>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://kaceymusgraves.com/cdn/shop/files/KACEY-00021-_Mystery-Products-Mocks_-02Opt4.png?v=1795392990&width=1000" alt="Avatar" style="width:300px;height:300px;" id="mystery">
+    </div>
+    <div class="flip-card-back">
+      <h1>🎊Milo's New Years Bash!🎊</h1> 
+      <img src="PXL_20241020_155736735.PORTRAIT copy.jpg" height="300px">
+      <p>Look how happy he is!</p>
+    </div>
+  </div>
+</div>
+</div></center>
 
 </body>
 </html>
